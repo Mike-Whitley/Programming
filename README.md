@@ -1,2 +1,2 @@
 # Programming
-This folder focuses on projects and learning of skills through out my journey to learning programming in many different language mainly Python, Java, Javascript and supporting kanguage such as SQL 
+This folder focuses on both my university/hobby projects and the learning of skills in multiple programming. The languages mainly used are Python, Java, Javascript and SQL
