@@ -1,7 +1,7 @@
 # SENG365 2020 Assignment 1
 
 
-SENG365 Assignment 1 backend API constructed using JavaScript and mysql.
+SENG365 Assignment 1 backend API constructed using JavaScript and mysql. 
 
 ## Running locally
 
