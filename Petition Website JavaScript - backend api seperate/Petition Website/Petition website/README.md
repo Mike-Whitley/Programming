@@ -1,5 +1,4 @@
-# chat-app
-
+# Petition Website
 > A Vue.js project
 
 ## Build Setup
