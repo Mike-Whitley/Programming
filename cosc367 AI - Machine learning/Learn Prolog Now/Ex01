@@ -1,0 +1,96 @@
+Exercises 
+
+ Exercise  1.1 Which of the following sequences of characters are atoms, which are variables, and which are neither?
+
+    vINCENT               Atom
+    Footmassage           Variable
+    variable23            Atom
+    Variable2000          Variable
+    big_kahuna_burger     Atom
+    ’big  kahuna  burger’ Atom
+    big  kahuna  burger   Neither
+    ’Jules’               Atom
+    _Jules                Variable - starts with _
+    ’_Jules’              Atom
+    
+    
+     Exercise  1.2 Which of the following sequences of characters are atoms, which are variables, 
+     which are complex terms, and which are not terms at all? Give the functor and arity of each complex term.
+     
+     Complex terms are build out of a functor followed by a sequence of arguments
+     The number of arguments that a complex term has is called its arity
+
+    loves(Vincent,mia)                Complex Term              functor = loves, arity : 2
+    ’loves(Vincent,mia)’              Atom  
+    Butch(boxer)                      Atom
+    boxer(Butch)                      Complex Term              complex term boxer/1
+    and(big(burger),kahuna(burger))   Complex Term              functor = and arity : 2  - kahuna(burger) is an atom etc..
+    and(big(X),kahuna(X))             Complex Term              functor = and, arity = 2
+    _and(big(X),kahuna(X))            No terms at all            variables cannot be used as a function                
+    (Butch  kills  Vincent)           No terms at all            not functor and commas
+    kills(Butch  Vincent)             No terms at all              no comma
+    kills(Butch,Vincent               No terms at all             no closing bracket
+
+
+ Exercise  1.3 How many facts, rules, clauses, and predicates are there in the following knowledge base? 
+ What are the heads of the rules, and what are the goals they contain?
+ 
+ predicates are woman, man, person, loves, son, daughter, father = 7
+ rules = 4
+ facts = 3
+ clauses = 7 - sum of rules and facts
+
+   woman(vincent).                    fact
+   woman(mia).                        fact
+   man(jules).                        fact
+   person(X):-  man(X);  woman(X).    rule
+   loves(X,Y):-  father(X,Y).         Rule
+   father(Y,Z):-  man(Y),  son(Z,Y). Rule
+   father(Y,Z):-  man(Y),  daughter(Z,Y).  Rule
+   
+   
+  
+    Exercise  1.4 Represent the following in Prolog:
+
+    Butch is a killer.
+    killer('Butch').
+    
+    Mia and Marsellus are married.
+    married('Mia', 'Marsellus').
+    married('Marsellus', 'Mia').
+    
+    Zed is dead.
+    dead('Zed').
+    
+    Marsellus kills everyone who gives Mia a footmassage.
+    kills('Marsellus', X) :- gives_foot_massage(X, 'Mia').
+    
+    Mia loves everyone who is a good dancer.
+    loves('Mia', X) :- good_dancer(X).
+    
+    
+    Jules eats anything that is nutritious or tasty.
+    eats(jules, X) :- nutritious(X); tasty(X).
+    
+    
+ Exercise  1.5 Suppose we are working with the following knowledge base:
+
+   wizard(ron).
+   hasWand(harry).
+   quidditchPlayer(harry).
+   wizard(X):-  hasBroom(X),  hasWand(X).
+   hasBroom(X):-  quidditchPlayer(X). 
+   
+    How does Prolog respond to the following queries?
+
+    wizard(ron).                         True.
+    witch(ron).                          False.
+    wizard(hermione).                    False
+    witch(hermione).                     False
+    wizard(harry).                       True
+    wizard(Y).                           Y = ron
+    witch(Y).                            False
+
+   
+   
+   
