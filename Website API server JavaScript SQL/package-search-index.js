@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"main"},{"l":"org.jframebg"},{"l":"org.kodejava.example.swing"},{"l":"test"}]
